@@ -1,18 +1,18 @@
 info:
-  name: deceasedListApi
+  name: viewClaim
   type: http
-  seq: 4
+  seq: 13
 
 http:
   method: GET
-  url: https://allalca.alca.life/api/deceasedListApi
+  url: https://allalca.alca.life/api/viewClaim
   headers:
     - name: Accept
       value: application/json
     - name: Content-Type
       value: application/json
     - name: Authorization
-      value: Bearer 9kppzgJX0W
+      value: Bearer JAx4Dr29Fm
   auth: inherit
 
 settings:
@@ -20,12 +20,12 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
-  forwardAuthorizationHeader: true
+  forwardAuthorizationHeader: false
 
 examples:
-  - name: deceasedListApi
+  - name: viewClaim
     request:
-      url: https://allalca.alca.life/api/deceasedListApi?page=1&per_page=5
+      url: https://allalca.alca.life/api/viewClaim?page=1&per_page=5
       method: GET
       headers:
         - name: Accept
@@ -33,7 +33,7 @@ examples:
         - name: Content-Type
           value: application/json
         - name: Authorization
-          value: "Bearer "
+          value: Bearer QfyOljXa7d
       params:
         - name: page
           value: "1"
@@ -42,6 +42,8 @@ examples:
           value: "5"
           type: query
     response:
+      status: 200
+      statusText: OK
       body:
         type: text
         data: ""
